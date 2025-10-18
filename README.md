@@ -30,9 +30,8 @@ class SecurityLearner:
         self.languages = ["Indonesian", "English (Learning)"]
         
         self.current_phase = {
-            "phase": "Pre-Fundamental (Month 1-4)",
-            "timeline": "October 2025 - January 2026",
-            "status": "🟢 Active Learning"
+            "phase": "Pre-Fundamental - Starting from Zero",
+            "status": "🟢 Day 1 - Building Foundation"
         }
         
         self.learning_focus = {
@@ -48,65 +47,62 @@ class SecurityLearner:
                 "Codewars (Python Kata)",
                 "LinuxJourney.com"
             ],
-            "tools_mastering": [
+            "tools_learning": [
                 "Terminal: tmux, zsh + oh-my-zsh",
-                "Editor: VSCode, Neovim",
-                "Modern CLI: bat, exa, ripgrep, fd",
+                "Editor: VSCode, Neovim + LazyVim",
+                "Modern CLI: bat, exa, ripgrep, fd, tldr",
                 "Version Control: Git, GitHub Actions"
             ]
         }
         
-        self.future_roadmap = {
-            "month_5_10": "🔐 Bug Bounty Fundamentals (PortSwigger Labs)",
-            "month_11_16": "📗 Intermediate Web Security + AWS Basics",
-            "month_17_22": "📙 Advanced Attacks + Cloud Pentesting",
-            "month_23_28": "📕 Expert Level + Private Programs",
-            "month_29_36": "🚀 SaaS Launch (Cloud Security Tool)"
+        self.roadmap_path = {
+            "pre_fundamental": "Linux + Python + English Foundation",
+            "bug_bounty_fundamental": "PortSwigger Labs + OWASP Top 10",
+            "bug_bounty_intermediate": "SQLi, XSS, SSRF, API Testing",
+            "bug_bounty_advanced": "OAuth, GraphQL, HTTP Smuggling",
+            "cloud_security_fundamental": "AWS/GCP/Azure Basics + IAM",
+            "cloud_security_intermediate": "CloudGoat + IaC Security",
+            "cloud_security_advanced": "CSPM + Kubernetes Security",
+            "expert_phase": "Private Programs + Tool Development",
+            "saas_development": "Cloud Security SaaS for Startups"
         }
         
-        self.goals_2026 = [
-            "✅ Complete Bandit Level 0-34",
-            "✅ Build 5+ Python Security Tools",
-            "✅ Complete 50+ Exercism Exercises",
-            "✅ Submit First Valid Bug Report",
-            "✅ Earn First Bounty ($50-100)",
-            "✅ TOEFL 60-70 / IELTS 5.0-5.5"
+        self.daily_goals = [
+            "📖 Learn & practice consistently",
+            "💻 Build real security tools",
+            "📝 Document everything I learn",
+            "🌐 Improve English skills daily",
+            "🤝 Share knowledge with community",
+            "🎯 Stay humble, keep learning"
         ]
     
     def daily_routine(self):
         return {
-            "morning_2h": "🌅 English Learning (Duolingo + Speaking)",
-            "day_4h": "💻 Linux Practice + Python Coding",
-            "evening_3h": "🔍 Security Labs + Tool Building",
-            "night_1h": "📝 Documentation + GitHub Updates"
+            "morning": "🌅 English Learning (Duolingo + Speaking Practice)",
+            "day": "💻 Linux Practice + Python Coding",
+            "evening": "🔍 Security Labs + Tool Building",
+            "night": "📝 Documentation + GitHub Updates"
         }
     
-    def get_stats(self):
+    def get_current_stats(self):
         return {
-            "days_learning": self.calculate_days_since_start(),
-            "commits_streak": "Building consistency...",
-            "tools_built": 0,  # Will grow!
-            "labs_completed": 0,  # Starting from zero
-            "bugs_found": 0,  # Journey begins
-            "bounties_earned": "$0 (Yet!)"
+            "journey_status": "Just Started! 🚀",
+            "commits_today": "Building the habit...",
+            "tools_built": "Planning phase",
+            "labs_completed": "Starting from zero",
+            "learning_streak": "Day 1 - Let's go!"
         }
-    
-    def calculate_days_since_start(self):
-        from datetime import datetime
-        start = datetime(2025, 10, 1)
-        today = datetime.now()
-        return (today - start).days
 
 # Initialize journey
 learner = SecurityLearner()
 print(f"🎯 {learner.name} | Started: {learner.started}")
-print(f"📍 Current: {learner.current_phase['phase']}")
-print(f"🚀 Next Milestone: First 30 Days of Consistent Learning!")
+print(f"📍 Status: {learner.current_phase['status']}")
+print(f"🚀 Focus: Learning one step at a time!")
 ```
 
 ---
 
-## 🛠️ Tech Stack & Learning Arsenal
+## 🛠️ Tech Stack & Tools Arsenal
 
 ### 🐧 Linux & Terminal (Currently Learning)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
@@ -115,23 +111,66 @@ print(f"🚀 Next Milestone: First 30 Days of Consistent Learning!")
 ![Tmux](https://img.shields.io/badge/Tmux-1BB91F?style=for-the-badge&logo=tmux&logoColor=white)
 ![Zsh](https://img.shields.io/badge/Zsh-F15A24?style=for-the-badge&logo=zsh&logoColor=white)
 
+**Modern CLI Tools:**
+- `bat` (better cat), `exa/eza` (better ls)
+- `ripgrep` (better grep), `fd` (better find)
+- `tldr` (better man), `ranger/nnn` (file managers)
+
 ### 🐍 Python & Development
 ![Python](https://img.shields.io/badge/Python_3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-### 🔐 Security Tools (Coming Soon)
+**Python Security Libraries:**
+- `requests`, `httpx` (HTTP requests)
+- `beautifulsoup4`, `lxml` (parsing)
+- `typer`, `rich` (CLI tools)
+- `asyncio` (async programming)
+
+### 🔐 Bug Bounty Tools (Roadmap)
+
+**Web Security Testing:**
 ![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633?style=for-the-badge&logo=burp-suite&logoColor=white)
 ![OWASP](https://img.shields.io/badge/OWASP-000000?style=for-the-badge&logo=owasp&logoColor=white)
 ![PortSwigger](https://img.shields.io/badge/PortSwigger-FF6633?style=for-the-badge)
-![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=for-the-badge&logo=metasploit&logoColor=white)
 
-### ☁️ Cloud Security (Roadmap)
+**Reconnaissance & Scanning:**
+- `subfinder`, `assetfinder`, `amass` (subdomain enum)
+- `httpx` (HTTP probing), `katana` (crawling)
+- `nuclei` (vulnerability scanner)
+- `ffuf`, `feroxbuster` (fuzzing)
+
+**Exploitation Tools:**
+- `sqlmap`, `ghauri` (SQL injection)
+- `dalfox`, `XSStrike` (XSS)
+- `jwt_tool` (JWT attacks)
+- `graphw00f`, `clairvoyance` (GraphQL)
+
+### ☁️ Cloud Security Tools (Roadmap)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+
+**Cloud Security Audit:**
+- `prowler` v4 (AWS/GCP/Azure audit)
+- `ScoutSuite` (multi-cloud security)
+- `Steampipe` (query cloud resources)
+- `CloudQuery` (data collection)
+
+**Container & IaC Security:**
+- `Trivy` (container scanning)
+- `Checkov` (IaC security)
+- `Terrascan`, `tfsec` (Terraform)
+- `Snyk IaC` (policy enforcement)
+
+**Kubernetes Security:**
+- `kube-bench` (CIS benchmark)
+- `kube-hunter` (penetration testing)
+- `kubescape` (security scanning)
+- `Falco` (runtime threat detection)
 
 ---
 
@@ -182,19 +221,18 @@ print(f"🚀 Next Milestone: First 30 Days of Consistent Learning!")
 
 ---
 
-## 📁 Repository Roadmap (Building in Progress)
+## 📁 Repository Structure & Roadmap
 
 ```
 📦 zerodayid14-alt's GitHub
 │
-├── 🐧 linux-scripts/                    [🔄 IN PROGRESS]
+├── 🐧 linux-scripts/                    [📅 Planned]
 │   ├── file-organizer.sh               # Auto organize files by extension
 │   ├── log-parser.sh                   # Parse & analyze log files
 │   ├── backup-automation.sh            # Automated backup system
-│   ├── system-monitor.sh               # System resource monitoring
 │   └── README.md
 │
-├── 🐍 python-security-tools/           [🔄 IN PROGRESS]
+├── 🐍 python-security-tools/           [📅 Planned]
 │   ├── subdomain_enum.py               # DNS-based subdomain finder
 │   ├── http_analyzer.py                # HTTP header security checker
 │   ├── port_scanner.py                 # Multi-threaded port scanner
@@ -203,251 +241,566 @@ print(f"🚀 Next Milestone: First 30 Days of Consistent Learning!")
 │   ├── requirements.txt
 │   └── README.md
 │
-├── 🔐 portswigger-labs/                [📅 COMING SOON - Month 5]
+├── 🔐 portswigger-labs/                [📅 Future]
 │   ├── apprentice/
 │   │   ├── xss/                        # XSS lab solutions
 │   │   ├── sqli/                       # SQL injection writeups
 │   │   ├── csrf/                       # CSRF challenges
 │   │   └── access-control/             # IDOR & privilege escalation
 │   ├── practitioner/
-│   └── README.md
+│   └── expert/
 │
-├── 📝 ctf-writeups/                    [🔄 IN PROGRESS]
+├── 📝 ctf-writeups/                    [📅 Planned]
 │   ├── overthewire/
-│   │   ├── bandit/
-│   │   │   ├── level-0-10.md          # Bandit walkthrough part 1
-│   │   │   ├── level-11-20.md         # Bandit walkthrough part 2
-│   │   │   └── level-21-34.md         # Bandit walkthrough part 3
-│   │   ├── leviathan/
-│   │   │   └── level-0-8.md
-│   │   └── natas/
-│   │       └── level-0-10.md
-│   ├── tryhackme/                      [📅 Month 5+]
-│   └── hackthebox/                     [📅 Month 11+]
+│   │   ├── bandit/                     # Level 0-34
+│   │   ├── leviathan/                  # Level 0-8
+│   │   └── natas/                      # Level 0-10
+│   ├── tryhackme/                      # TryHackMe rooms
+│   └── hackthebox/                     # HTB challenges
 │
-├── ☁️ cloud-security/                  [📅 Month 11+]
+├── ☁️ cloud-security/                  [📅 Future]
 │   ├── aws-fundamentals/
 │   │   ├── s3-security/
 │   │   ├── iam-policies/
 │   │   └── ec2-hardening/
+│   ├── gcp-security/
+│   ├── azure-security/
 │   ├── cloudgoat-scenarios/
-│   └── terraform-security/
+│   ├── terraform-security/
+│   └── kubernetes-security/
 │
-├── 📚 learning-notes/                  [🔄 ACTIVE]
+├── 📚 learning-notes/                  [🔄 Active]
 │   ├── linux-cheatsheet.md            # Essential Linux commands
 │   ├── python-snippets.md             # Python security patterns
 │   ├── bash-scripting-guide.md        # Bash automation tips
 │   ├── git-workflow.md                # Git best practices
 │   ├── http-fundamentals.md           # Web protocols notes
-│   └── owasp-top10.md                 # OWASP vulnerabilities
+│   ├── owasp-top10.md                 # OWASP vulnerabilities
+│   └── burp-suite-guide.md            # Burp Suite workflows
 │
-├── 🎬 content-materials/               [🔄 IN PROGRESS]
+├── 🎬 content-materials/               [📅 Planned]
 │   ├── video-scripts/
 │   │   ├── linux-basics-series/
 │   │   ├── python-security-tools/
 │   │   └── overthewire-walkthroughs/
 │   ├── blog-articles/
-│   │   ├── my-journey-into-security.md
-│   │   ├── bandit-complete-guide.md
-│   │   └── python-tools-tutorial.md
 │   └── demo-code/
 │
-└── 🔧 automation-scripts/              [📅 Month 3+]
+└── 🔧 automation-scripts/              [📅 Future]
+    ├── recon-pipeline/
     ├── github-automation/
-    ├── content-scheduler/
-    └── recon-pipeline/
+    └── content-scheduler/
 
 Legend:
-🔄 IN PROGRESS  - Currently building
-📅 COMING SOON  - Scheduled in roadmap
-✅ COMPLETED    - Ready to use
+🔄 ACTIVE     - Working on it now
+📅 PLANNED    - Coming soon
+📅 FUTURE     - In the roadmap
 ```
 
 ---
 
-## 🚀 Current Projects & Focus
+## 🚀 Learning Path & Roadmap
 
 <div align="center">
 
-<table>
-<tr>
-<td width="50%">
-
-### 🐧 [Linux Automation Scripts](https://github.com/zerodayid14-alt/linux-scripts)
-**Status:** 🔄 Building (Week 1-2)
-
-**Bash scripting toolkit for daily automation**
-- 📁 File organizer by extension
-- 📊 System log parser with regex
-- 💾 Automated backup with tar/gzip
-- 🔧 Cron job integration
-
-**Skills Learning:**
-- Bash scripting fundamentals
-- File operations & permissions
-- Regex pattern matching
-- Process automation
-
-**Progress:** 1/3 scripts completed
-
-</td>
-<td width="50%">
-
-### 🐍 [Python Security Tools](https://github.com/zerodayid14-alt/python-security-tools)
-**Status:** 🔄 Building (Week 2-4)
-
-**Collection of beginner security utilities**
-- 🌐 Subdomain enumerator (DNS queries)
-- 🔍 HTTP header analyzer
-- 🔓 Port scanner (threading)
-- 🔐 Password strength validator
-- 📊 Log file parser
-
-**Skills Learning:**
-- Python 3.12+ syntax
-- Requests library
-- Socket programming
-- Threading basics
-
-**Progress:** Planning phase
-
-</td>
-</tr>
-
-<tr>
-<td width="50%">
-
-### 📝 [CTF Writeups](https://github.com/zerodayid14-alt/ctf-writeups)
-**Status:** 🔄 Active Documentation
-
-**Learning journey documentation**
-- ✅ OverTheWire Bandit (0-10 completed)
-- 🔄 Leviathan (starting soon)
-- 🔄 Natas (web challenges)
-- 📝 Detailed explanations in English
-- 💡 Lessons learned section
-
-**Format:**
-- Step-by-step walkthroughs
-- Commands used
-- Concepts explained
-- Screenshots included
-
-**Target:** Complete Bandit 0-34 by Month 4
-
-</td>
-<td width="50%">
-
-### 📚 [Security Learning Notes](https://github.com/zerodayid14-alt/learning-notes)
-**Status:** 🔄 Daily Updates
-
-**Personal knowledge base in Markdown**
-- 📖 Linux command reference
-- 🐍 Python code snippets
-- 🔧 Tool configurations
-- 🎓 Study progress tracker
-- 📝 English vocabulary (tech terms)
-
-**Organization:**
-- Obsidian-compatible format
-- Tagged for easy search
-- Examples included
-- Updated daily
-
-**Goal:** 100+ notes by Month 4
-
-</td>
-</tr>
-
-</table>
-
-</div>
-
----
-
-## 📈 Learning Progress & Roadmap
-
-<div align="center">
+### 📚 My Security Journey
 
 ```mermaid
-gantt
-    title My 36-Month Security Journey (Oct 2025 - Oct 2027)
-    dateFormat YYYY-MM
+graph TB
+    A[🔰 Pre-Fundamental] --> B[📘 Bug Bounty Fundamental]
+    B --> C[📗 Bug Bounty Intermediate]
+    C --> D[📙 Bug Bounty Advanced]
+    D --> E[📕 Bug Bounty Expert]
     
-    section Pre-Fundamental
-    Linux Command Line           :active, pf1, 2025-10, 2026-01
-    Python Security Basics       :active, pf2, 2025-10, 2026-01
-    English Foundation           :active, pf3, 2025-10, 2026-01
+    A --> F[☁️ Cloud Security Fundamental]
+    F --> G[☁️ Cloud Security Intermediate]
+    G --> H[☁️ Cloud Security Advanced]
+    H --> I[☁️ Cloud Security Expert]
     
-    section Bug Bounty Path
-    Fundamental Labs             :bb1, 2026-02, 2026-07
-    Intermediate Hunting         :bb2, 2026-08, 2027-01
-    Advanced Techniques          :bb3, 2027-02, 2027-07
-    Expert Private Programs      :bb4, 2027-08, 2028-01
+    E --> J[🚀 SaaS Development]
+    I --> J
     
-    section Cloud Security
-    AWS/GCP Fundamentals        :cs1, 2026-08, 2027-01
-    Cloud Pentesting            :cs2, 2027-02, 2027-07
-    Advanced CSPM               :cs3, 2027-08, 2028-01
-    
-    section Content & SaaS
-    YouTube & Blog Content      :ct1, 2026-02, 2028-01
-    SaaS Development           :saas, 2027-11, 2028-04
+    style A fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style B fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style C fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style D fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style E fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style F fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style G fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style H fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style I fill:#1a1b27,stroke:#00FF41,color:#00FF41
+    style J fill:#1a1b27,stroke:#00FF41,color:#00FF41
+```
+
+</div>
+
+### 🎯 Learning Phases
+
+<details>
+<summary><b>🔰 Phase 1: Pre-Fundamental</b></summary>
+
+**Foundation Building**
+- 🐧 Linux Command Line mastery (OverTheWire Bandit 0-34)
+- 🐍 Python basics to intermediate
+- 🌐 English learning (TOEFL/IELTS preparation)
+- 📝 Build 5 Python security tools
+- 📚 Complete Exercism Python track (50+ exercises)
+- 🏆 Codewars kata (30+ challenges, 6-7 kyu)
+
+**Tools to Master:**
+- Terminal: `zsh`, `tmux`, `bat`, `exa`, `ripgrep`, `fd`
+- Editor: `neovim`, `VSCode`
+- Python: `requests`, `beautifulsoup4`, `typer`, `rich`
+
+</details>
+
+<details>
+<summary><b>📘 Phase 2: Bug Bounty Fundamental</b></summary>
+
+**Web Security Basics**
+- PortSwigger Academy (Apprentice level 20+ labs)
+- OWASP Top 10 hands-on practice
+- HTTP fundamentals, authentication, access control
+- XSS, SQLi, CSRF, IDOR basics
+- First bug submissions to VDP programs
+
+**Platforms:**
+- PortSwigger Web Security Academy
+- OWASP Juice Shop
+- TryHackMe (OWASP Top 10 path)
+- PentesterLab Introduction
+
+**Tools:**
+- Burp Suite Community
+- Browser extensions (FoxyProxy, Wappalyzer)
+- Firefox DevTools
+
+</details>
+
+<details>
+<summary><b>📗 Phase 3: Bug Bounty Intermediate</b></summary>
+
+**Advanced Web Attacks**
+- PortSwigger Practitioner labs (50+)
+- Advanced XSS (stored, DOM, filter bypass)
+- SQL injection (all techniques)
+- SSRF, XXE, SSTI, Command Injection
+- JWT attacks, file upload bypass
+- Start public bug bounty programs
+
+**Tools:**
+- Burp Suite Pro / Caido Pro
+- `sqlmap`, `ghauri` (SQLi)
+- `dalfox`, `XSStrike` (XSS)
+- `ffuf`, `feroxbuster` (fuzzing)
+- `jwt_tool` (JWT)
+
+</details>
+
+<details>
+<summary><b>📙 Phase 4: Bug Bounty Advanced</b></summary>
+
+**Modern Web Security**
+- OAuth 2.0 vulnerabilities
+- GraphQL & gRPC API testing
+- HTTP Request Smuggling
+- WebSockets security
+- Prototype Pollution
+- Advanced CORS & SSRF
+- Private programs
+
+**Tools:**
+- `graphw00f`, `clairvoyance` (GraphQL)
+- `grpcurl`, `grpcui` (gRPC)
+- Full recon stack (`subfinder`, `httpx`, `katana`, `nuclei`)
+- Custom automation pipelines
+
+</details>
+
+<details>
+<summary><b>☁️ Phase 5: Cloud Security Fundamental</b></summary>
+
+**Cloud Basics**
+- AWS/GCP/Azure fundamentals
+- IAM (users, roles, policies, service accounts)
+- S3/Storage security
+- CloudGoat scenarios (1-5)
+- Container basics (Docker)
+
+**Tools:**
+- `aws-cli`, `gcloud`, `az`
+- `prowler` v4 (cloud audit)
+- `ScoutSuite` (multi-cloud)
+- `Trivy` (container scanning)
+- `Trufflehog`, `Gitleaks` (secrets)
+
+</details>
+
+<details>
+<summary><b>☁️ Phase 6: Cloud Security Intermediate</b></summary>
+
+**Cloud Pentesting**
+- IAM privilege escalation (22 methods)
+- Lambda/Cloud Functions abuse
+- Metadata SSRF attacks
+- IaC security (Terraform, CloudFormation)
+- Kubernetes security basics
+- All CloudGoat scenarios
+
+**Tools:**
+- `Pacu` (AWS exploitation)
+- `PMapper` (IAM escalation paths)
+- `Checkov`, `Terrascan` (IaC)
+- `kube-bench`, `kube-hunter` (K8s)
+- `Syft`, `Grype` (SBOM & scanning)
+
+</details>
+
+<details>
+<summary><b>☁️ Phase 7: Cloud Security Advanced</b></summary>
+
+**Enterprise Cloud Security**
+- Multi-account architecture
+- Security Command Center (GCP)
+- Defender for Cloud (Azure)
+- CSPM implementation
+- Falco runtime detection
+- Policy enforcement (OPA, Kyverno)
+- Service mesh security (Istio)
+
+**Tools:**
+- `Falco` (runtime security)
+- `Open Policy Agent` (policy as code)
+- `CloudQuery` + `Steampipe` (CSPM stack)
+- `Cilium` (eBPF networking)
+- `Istio`, `Linkerd` (service mesh)
+
+</details>
+
+<details>
+<summary><b>📕 Phase 8: Expert Level</b></summary>
+
+**Mastery & Specialization**
+- Private bug bounty programs
+- High/Critical severity focus
+- Custom tool development
+- Research & CVE discoveries
+- Conference talks (DEF CON, Black Hat)
+- Content creation (YouTube, blog)
+
+**Deliverables:**
+- Open-source security tools
+- Technical writeups & research papers
+- Video tutorials & courses
+- Community contributions
+
+</details>
+
+<details>
+<summary><b>🚀 Phase 9: SaaS Development</b></summary>
+
+**Build & Launch**
+- Cloud security SaaS for Indonesian startups
+- Features: CSPM, compliance automation, alerting
+- Tech stack: Python/Go backend, React frontend
+- MVP development & beta testing
+- Market launch & customer acquisition
+
+</details>
+
+---
+
+## 📝 Latest Updates
+
+<div align="center">
+
+<!-- BLOG-POST-LIST:START -->
+**🎉 Day 1 - Journey Begins! (October 18, 2025)**
+
+Just started my journey into cybersecurity! Setting up my GitHub profile and planning my learning roadmap. Excited to learn Linux, Python, and web security from scratch. Follow my progress!
+
+**What I'm focusing on:**
+- 🐧 Setting up Linux environment
+- 🐍 Installing Python 3.12 + VSCode
+- 📚 Starting OverTheWire Bandit
+- 🌐 Daily English practice (Duolingo)
+- 📝 Creating learning notes repository
+
+**Next Steps:**
+- Complete first 5 Bandit levels
+- Write first bash script
+- Setup GitHub workflow
+<!-- BLOG-POST-LIST:END -->
+
+</div>
+
+---
+
+## 🎓 Learning Resources
+
+<details>
+<summary>📖 <b>Books & Materials</b></summary>
+
+### Currently Reading
+- 📚 **Linux Basics for Hackers** - OccupyTheWeb
+- 📚 **Python Crash Course 3rd Edition** - Eric Matthes
+- 📚 **Automate the Boring Stuff** - Al Sweigart
+- 📚 **The Linux Command Line** - William Shotts (Free)
+
+### Future Reading List
+- **Bug Bounty Bootcamp** - Vickie Li
+- **Black Hat Python 2nd Edition** - Justin Seitz
+- **Real-World Bug Hunting** - Peter Yaworski
+- **AWS Security** - Manning Publications
+- **Kubernetes Security** - O'Reilly
+- **API Security in Action** - Neil Madden
+
+</details>
+
+<details>
+<summary>🎓 <b>Learning Platforms</b></summary>
+
+### Linux & Command Line
+- 🌐 **OverTheWire** - Bandit, Leviathan, Natas
+- 🌐 **LinuxJourney.com** - Structured curriculum
+- 🌐 **CmdChallenge.com** - Practice challenges
+
+### Python Programming
+- 🐍 **Exercism.org** - Mentored exercises
+- 🐍 **Codewars** - Kata challenges
+- 🐍 **Real Python** - Tutorials & articles
+
+### Web Security
+- 🔐 **PortSwigger Academy** - Free labs
+- 🔐 **OWASP Juice Shop** - Vulnerable app
+- 🔐 **TryHackMe** - Guided learning
+- 🔐 **PentesterLab** - Hands-on exercises
+- 🔐 **HackTheBox** - CTF challenges
+
+### Cloud Security
+- ☁️ **AWS Skill Builder** - Free courses
+- ☁️ **GCP Skills Boost** - Google training
+- ☁️ **Azure Learn** - Microsoft training
+- ☁️ **CloudGoat** - AWS pentesting
+- ☁️ **Kubernetes Goat** - K8s security
+
+### English Learning
+- 🌐 **Duolingo** - Daily practice
+- 🌐 **BBC Learning English** - Podcasts
+- 🌐 **Anki** - Flashcards (tech vocab)
+- 🌐 **ELSA Speak** - Pronunciation
+
+</details>
+
+<details>
+<summary>🛠️ <b>Tools & Technologies</b></summary>
+
+### Phase 1: Pre-Fundamental
+```bash
+# Terminal & Shell
+zsh + oh-my-zsh          # Modern shell
+tmux                     # Terminal multiplexer
+WezTerm / Alacritty     # Fast terminals
+
+# Modern CLI Tools
+bat                      # Better cat
+exa / eza                # Better ls
+ripgrep (rg)            # Better grep
+fd                       # Better find
+tldr                     # Better man pages
+ranger / nnn            # File managers
+
+# Development
+neovim + LazyVim        # Text editor
+VSCode                   # IDE
+Python 3.12+            # Programming
+```
+
+### Phase 2-4: Bug Bounty Tools
+```bash
+# Web Security
+Burp Suite Pro          # Proxy & testing
+Caido                   # Modern alternative
+Firefox + Extensions    # Browser testing
+
+# Reconnaissance
+subfinder               # Subdomain enumeration
+assetfinder             # Asset discovery
+amass                   # Network mapping
+httpx                   # HTTP probing
+katana                  # Web crawling
+nuclei                  # Vulnerability scanner
+
+# Exploitation
+sqlmap                  # SQL injection
+ghauri                  # SQLi alternative
+dalfox                  # XSS scanner
+XSStrike               # XSS tool
+ffuf                    # Fuzzing
+feroxbuster            # Directory bruteforce
+jwt_tool               # JWT attacks
+graphw00f              # GraphQL fingerprint
+```
+
+### Phase 5-7: Cloud Security Tools
+```bash
+# Cloud CLI
+aws-cli v2              # AWS management
+gcloud                  # GCP management
+az                      # Azure management
+
+# Security Auditing
+prowler v4              # Multi-cloud audit
+ScoutSuite             # Security posture
+Steampipe              # Query resources
+CloudQuery             # Data collection
+
+# IAM Security
+PMapper                 # Privilege escalation
+Cloudsplaining         # IAM risk analysis
+Pacu                    # AWS exploitation
+
+# IaC Security
+Checkov                 # Policy scanning
+Terrascan              # IaC security
+tfsec                   # Terraform specific
+Snyk IaC               # Vulnerability scanning
+
+# Container Security
+Trivy                   # Image scanning
+Grype                   # Vuln scanner
+Syft                    # SBOM generation
+Docker Bench           # Security audit
+
+# Kubernetes
+kube-bench             # CIS benchmark
+kube-hunter            # Penetration test
+kubescape              # Security scanning
+Falco                   # Runtime detection
+
+# Secrets Management
+Trufflehog v3          # Secret scanning
+Gitleaks               # Git secret detection
+ggshield               # GitGuardian
+detect-secrets         # Pre-commit hooks
+```
+
+</details>
+
+---
+
+## 🎬 Content & Social Media
+
+<div align="center">
+
+### 📺 Follow My Journey
+
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@ZeroDayId)
+[![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://tiktok.com/@zeroday.id)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@gmail.com)
+
+**Content Focus:**
+- 🐧 Linux command line tutorials (Bahasa & English)
+- 🐍 Python security tool development
+- 🔐 OverTheWire walkthroughs (Bandit, Natas)
+- ☁️ Cloud security tutorials
+- 📝 Bug bounty writeups & tips
+- 🎯 Learning journey vlogs
+
+**Content Schedule:**
+- 📹 **YouTube**: Weekly tutorials & walkthroughs
+- 🎵 **TikTok**: Daily tips & quick hacks
+- 📧 **Email**: For collaboration & questions
+
+</div>
+
+---
+
+## 💡 Support My Learning Journey
+
+<div align="center">
+
+**If you find my content helpful, consider supporting:**
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](YOUR_BUYMEACOFFEE_LINK)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](YOUR_PAYPAL_LINK)
+
+**Or simply:**
+- ⭐ Star my repositories
+- 📢 Share my content
+- 💬 Give feedback & suggestions
+- 🤝 Collaborate on projects
+
+Every support helps me continue learning and creating free content for the community! 🙏
+
+</div>
+
+---
+
+## 📊 Detailed GitHub Metrics
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=zerodayid14-alt&theme=chartreuse_dark" width="100%"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=zerodayid14-alt&theme=chartreuse_dark" width="32%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=zerodayid14-alt&theme=chartreuse_dark" width="32%"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=zerodayid14-alt&theme=chartreuse_dark" width="32%"/>
+
+</div>
+
+---
+
+## 💭 My Philosophy
+
+<div align="center">
+
+```javascript
+const mindset = {
+    approach: "Learn by doing, build by breaking",
+    belief: "Every expert was once a beginner",
+    method: "Consistent progress over perfection",
+    sharing: "Learn in public, help others grow",
+    ethics: "Hack responsibly, disclose ethically",
+    goal: "Master security, one bug at a time 🛡️"
+};
+
+console.log("🎯 Mission: " + mindset.goal);
+// Output: 🎯 Mission: Master security, one bug at a time 🛡️
 ```
 
 </div>
 
 ---
 
-## 🎯 Milestone Tracker
+## 🎯 Current Focus
 
 <div align="center">
 
-### 📍 Current Phase: Pre-Fundamental (Month 1-4)
-**Timeline:** October 2025 - January 2026
-
-| 🏆 Milestone | 📊 Progress | 🎯 Target | 🗓️ Deadline | ✅ Status |
-|-------------|------------|-----------|------------|----------|
-| **OverTheWire Bandit** | 10/34 levels | Level 34 | Jan 2026 | 🟡 30% |
-| **Python Exercism** | 5/50 exercises | 50 complete | Jan 2026 | 🟡 10% |
-| **Codewars Kata** | 0/30 kata | 30 (6-7 kyu) | Jan 2026 | 🔴 0% |
-| **Python Tools Built** | 0/5 tools | 5 working tools | Jan 2026 | 🔴 0% |
-| **Bash Scripts** | 0/3 scripts | 3 automation | Jan 2026 | 🔴 0% |
-| **GitHub Repos** | 2/5 repos | 5 public repos | Jan 2026 | 🟡 40% |
-| **English Level** | - | TOEFL 60-70 | Jan 2026 | 🔴 Start |
-| **Daily Commits** | 7 days | 90+ day streak | Jan 2026 | 🟢 Week 1 |
-
-### 📅 Upcoming Milestones (Month 5-10)
-
-| 🏆 Milestone | 🎯 Target | 🗓️ Timeline |
-|-------------|-----------|------------|
-| **First Valid Bug** | 1 bug report | Month 6 |
-| **PortSwigger Apprentice** | 20+ labs | Month 5-7 |
-| **OWASP Juice Shop** | 1-2 star (20 challenges) | Month 8 |
-| **First Bounty** | $50-100 earned | Month 9-10 |
-| **Writeups Published** | 10+ English articles | Month 10 |
-| **YouTube Channel** | First 5 videos | Month 8-10 |
+| Area | Status | Focus |
+|------|--------|-------|
+| 🐧 **Linux Skills** | 🔄 Learning | Command line mastery, bash scripting |
+| 🐍 **Python** | 🔄 Learning | Building security automation tools |
+| 🌐 **English** | 🔄 Improving | Technical reading & writing |
+| 🔐 **Web Security** | 📅 Planned | PortSwigger labs coming soon |
+| ☁️ **Cloud Security** | 📅 Roadmap | AWS/GCP fundamentals later |
 
 </div>
 
 ---
 
-## 💻 Weekly Activity & Consistency
+## 📈 Weekly Activity
 
 <div align="center">
 
 <!--START_SECTION:waka-->
 ```text
-📊 This Week's Coding Time (Starting to build the habit!)
+Just started! Building the habit of consistent learning...
 
-Bash         45 mins         ██████░░░░░░░░░░░░░░░  30.0%
-Python       30 mins         ████░░░░░░░░░░░░░░░░░  20.0%
-Markdown     30 mins         ████░░░░░░░░░░░░░░░░░  20.0%
-English      45 mins         ██████░░░░░░░░░░░░░░░  30.0%
-
-🎯 Goal: 50+ hours/week by Month 2
-📈 Current: Building momentum...
-🔥 Streak: 7 days (Keep going!)
+🎯 Goal: Learn something new every day
+📚 Focus: Linux + Python fundamentals
+⏰ Study Time: Building up to 50+ hours/week
+🔥 Streak: Day 1 - Let's keep it going!
 ```
 <!--END_SECTION:waka-->
 
@@ -455,186 +808,72 @@ English      45 mins         ██████░░░░░░░░░░░
 
 ---
 
-## 📝 Latest Learning Updates & Blog
+## 🤝 Let's Connect
 
 <div align="center">
 
-<!-- BLOG-POST-LIST:START -->
-📅 **Week 1 Updates (October 2025)**
-- 🎉 Started my security journey on GitHub!
-- 🐧 Completed Bandit Level 0-10 (OverTheWire)
-- 🐍 Setup Python 3.12 + VSCode environment
-- 📚 Created first learning notes repository
-- 🌐 Practicing English daily (2 hours)
+I'm always open to:
+- 💬 Collaboration on security projects
+- 🎓 Learning together & knowledge sharing
+- 🐛 Bug bounty team-ups (when I'm ready!)
+- 📝 Content creation partnerships
+- ☕ Virtual coffee chats about security
 
-📝 **Coming Soon:**
-- Complete guide: "Bandit 0-34 Walkthrough"
-- Tutorial: "Building Your First Python Security Tool"
-- Article: "My Journey from Zero to Bug Bounty Hunter"
-<!-- BLOG-POST-LIST:END -->
-
-➡️ [**Follow my journey on Medium**](https://medium.com/@zerodayid14) *(Coming Soon)*
+**Best way to reach me:**
+- 📧 Email (check badges above)
+- 📺 YouTube comments
+- 🎵 TikTok DMs
 
 </div>
 
 ---
 
-## 🎓 Learning Resources & Platforms
-
-<details>
-<summary>📖 <b>Books I'm Reading (Click to expand)</b></summary>
-
-### 📚 Current Reading (Month 1-4)
-- 🔄 **Linux Basics for Hackers** - OccupyTheWeb
-- 🔄 **Python Crash Course 3rd Edition** - Eric Matthes
-- 🔄 **Automate the Boring Stuff** - Al Sweigart
-- 📖 **The Linux Command Line** - William Shotts (Free PDF)
-
-### 📅 Next Books (Month 5+)
-- 📅 **Bug Bounty Bootcamp** - Vickie Li (Month 5)
-- 📅 **Black Hat Python 2nd Edition** - Justin Seitz (Month 8)
-- 📅 **Real-World Bug Hunting** - Peter Yaworski (Month 11)
-- 📅 **AWS Security** - Manning (Month 11)
-
-**Budget:** ~$315 spread over 17 months
-
-</details>
-
-<details>
-<summary>🎓 <b>Platforms I'm Using (Click to expand)</b></summary>
-
-### 🐧 Linux & Command Line
-- ✅ **OverTheWire** - Bandit, Leviathan, Natas (Active)
-- ✅ **LinuxJourney.com** - Structured curriculum (Active)
-- ✅ **CmdChallenge.com** - Command practice (Weekly)
-
-### 🐍 Python Learning
-- ✅ **Exercism.org** - Mentored exercises (Daily)
-- 🔄 **Codewars** - Kata challenges (Starting)
-- ✅ **Real Python** - Articles & tutorials (Reference)
-
-### 🔐 Security Labs (Starting Month 5)
-- 📅 **PortSwigger Academy** - Web security labs
-- 📅 **OWASP Juice Shop** - Vulnerable web app
-- 📅 **TryHackMe** - Guided security rooms
-- 📅 **PentesterLab** - Hands-on exercises
-
-### ☁️ Cloud Security (Starting Month 11)
-- 📅 **AWS Skill Builder** - Free courses
-- 📅 **GCP Skills Boost** - Google Cloud training
-- 📅 **CloudGoat** - AWS pentesting scenarios
-- 📅 **Kubernetes Goat** - K8s security
-
-### 🌐 English Learning
-- ✅ **Duolingo** - Daily grammar (30 min/day)
-- ✅ **BBC Learning English** - Podcasts
-- ✅ **Anki** - Tech vocabulary flashcards
-- 📅 **iTalki** - 1-on-1 tutor (Month 7+)
-
-</details>
-
-<details>
-<summary>🛠️ <b>Tools I'm Mastering (Click to expand)</b></summary>
-
-### ✅ Currently Learning (Month 1-4)
-```bash
-# Terminal & Shell
-zsh + oh-my-zsh          # Modern shell
-tmux                     # Terminal multiplexer
-WezTerm/Alacritty       # Fast terminals
-
-# Modern CLI Tools
-bat                      # Better cat
-exa/eza                  # Better ls
-ripgrep (rg)            # Better grep
-fd                       # Better find
-tldr                     # Better man
-ranger/nnn              # File managers
-
-# Editors
-neovim + LazyVim        # Advanced editing
-VSCode                   # Python development
-
-# Version Control
-git                      # Version control
-GitHub CLI              # GitHub integration
-```
-
-### 📅 Coming Soon (Month 5+)
-```bash
-# Web Security
-Burp Suite Community    # Proxy & testing
-Firefox + FoxyProxy     # Browser setup
-Wappalyzer             # Tech detection
-
-# Bug Bounty Tools (Month 11+)
-subfinder              # Subdomain enum
-httpx                  # HTTP probing
-nuclei                 # Vulnerability scanner
-ffuf                   # Fuzzing
-sqlmap                 # SQL injection
-```
-
-</details>
-
----
-
-## 🎬 Content Creation Journey
+## 💡 Random Security Wisdom
 
 <div align="center">
 
-### 📺 YouTube | 📝 Blog | 🐦 Social Media
-
-**Status:** 🔄 Planning & Learning Phase
-
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@zerodayid14) *(Coming Soon)*
-[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@zerodayid14) *(Coming Soon)*
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/zerodayid14) *(Coming Soon)*
-[![Dev.to](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/zerodayid14) *(Coming Soon)*
-
-### 🎯 Content Roadmap
-
-**Phase 1 (Month 1-4): Foundation**
-- 📝 Weekly progress updates on GitHub
-- 🐧 Bandit walkthrough series
-- 🐍 Python security tool tutorials
-- 📚 Learning notes & cheatsheets
-
-**Phase 2 (Month 5-10): Bug Bounty Basics**
-- 🎥 PortSwigger lab walkthroughs
-- 📝 First bug report writeups
-- 🔧 Tool development videos
-- 📖 Beginner-friendly guides
-
-**Phase 3 (Month 11+): Advanced Content**
-- 🎯 High-quality bug bounty writeups
-- ☁️ Cloud security tutorials
-- 🛠️ Open-source tool releases
-- 🎤 Conference talk submissions
-
-### 📊 Content Goals
-
-| Platform | Month 4 | Month 10 | Month 16 |
-|----------|---------|----------|----------|
-| 📝 Blog Articles | 5 | 20 | 50 |
-| 🎥 YouTube Videos | 0 | 10 | 30 |
-| 🐦 Twitter Followers | 50 | 500 | 2000 |
-| ⭐ GitHub Stars | 10 | 100 | 500 |
+![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&quote=The+quieter+you+become,+the+more+you+are+able+to+hear&author=Kali+Linux+Motto)
 
 </div>
 
 ---
 
-## 💰 Income & Monetization Roadmap
+## 🚧 Work in Progress
 
 <div align="center">
 
-### 📊 Projected Monthly Income (3-Year Journey)
+**This profile is constantly evolving as I learn!**
 
-| Phase | Bug Bounty | Content | Consulting | Total/Month |
-|-------|-----------|---------|------------|-------------|
-| **Month 1-4** (Pre-Fund) | $0 | $0 | $0 | **$0** |
-| **Month 5-10** (First Bugs) | $50-200 | $0 | $0 | **$50-200** |
-| **Month 11-16** (Intermediate) | $200-500 | $100-300 | $0 | **$300-800** |
-| **Month 17-22** (Advanced) | $500-1k | $300-600 | $200-500 | **$1k-2.1k** |
-| **Month 23-28** (Expert) | $800-1.5k | $600-1k | $500-1k | **$1.9k-3.5k** |
+Current tasks:
+- ✅ Setup GitHub profile
+- 🔄 Complete first 10 Bandit levels
+- 📝 Create learning notes repository
+- 🐍 Build first Python security tool
+- 📹 Record first YouTube tutorial
+
+**Last Updated:** October 18, 2025
+
+</div>
+
+---
+
+<div align="center">
+
+### 🔐 Learning to Hack The Planet, Responsibly
+
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="500">
+
+**"The only truly secure system is one that is powered off, cast in a block of concrete and sealed in a lead-lined room with armed guards."**  
+*- Gene Spafford*
+
+**But where's the fun in that? Let's learn to secure the rest! 🚀**
+
+---
+
+![](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer&fontSize=0)
+
+**⭐ Star this repo if you're on a similar journey!**
+
+**Made with 💚 by ZeroDay Indonesia | Started: October 2025**
+
+</div>
